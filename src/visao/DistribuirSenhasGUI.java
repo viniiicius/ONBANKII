@@ -56,18 +56,18 @@ public class DistribuirSenhasGUI extends javax.swing.JFrame {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jRadioButtonVIP = new javax.swing.JRadioButton();
-        jButtonRetirar = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        jLabelHora = new javax.swing.JLabel();
-        jButtonSenhaAtual = new javax.swing.JButton();
-        jRadioButtonPreferencial = new javax.swing.JRadioButton();
-        jRadioButtonComum = new javax.swing.JRadioButton();
-        jButtonChamar = new javax.swing.JButton();
-        jLabel7 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jRadioButtonComum = new javax.swing.JRadioButton();
+        jRadioButtonVIP = new javax.swing.JRadioButton();
+        jRadioButtonPreferencial = new javax.swing.JRadioButton();
+        jButtonRetirar = new javax.swing.JButton();
+        jButtonChamar = new javax.swing.JButton();
+        jButtonSenhaAtual = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabelHora = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -76,11 +76,28 @@ public class DistribuirSenhasGUI extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
 
-        jLabel1.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
-        jLabel1.setText("Tipo de senha:");
+        jLabel3.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
+        jLabel3.setText("ON BANK");
+
+        jLabel4.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jLabel4.setText("SAJ");
+
+        jLabel1.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
+        jLabel1.setText("Senha de atendimento:");
+
+        jRadioButtonComum.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        jRadioButtonComum.setText("Caixas");
+        jRadioButtonComum.setToolTipText("Caixas");
+        jRadioButtonComum.setOpaque(false);
+        jRadioButtonComum.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButtonComumActionPerformed(evt);
+            }
+        });
 
         jRadioButtonVIP.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         jRadioButtonVIP.setText("ON Bank Uniclass");
+        jRadioButtonVIP.setToolTipText("ON Bank Uniclass");
         jRadioButtonVIP.setOpaque(false);
         jRadioButtonVIP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -88,13 +105,49 @@ public class DistribuirSenhasGUI extends javax.swing.JFrame {
             }
         });
 
+        jRadioButtonPreferencial.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        jRadioButtonPreferencial.setText("Mesas de Atendimento");
+        jRadioButtonPreferencial.setToolTipText("Mesas de Atendimento");
+        jRadioButtonPreferencial.setOpaque(false);
+        jRadioButtonPreferencial.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButtonPreferencialActionPerformed(evt);
+            }
+        });
+
         jButtonRetirar.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-        jButtonRetirar.setText("Imprimir Senha");
+        jButtonRetirar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/icons8-impressão-50 (1).png"))); // NOI18N
+        jButtonRetirar.setToolTipText("Imprimir Senha");
+        jButtonRetirar.setBorderPainted(false);
+        jButtonRetirar.setContentAreaFilled(false);
+        jButtonRetirar.setName(""); // NOI18N
         jButtonRetirar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonRetirarActionPerformed(evt);
             }
         });
+
+        jButtonChamar.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jButtonChamar.setText("Tela de chamada");
+        jButtonChamar.setToolTipText("Tela de chamada");
+        jButtonChamar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonChamarActionPerformed(evt);
+            }
+        });
+
+        jButtonSenhaAtual.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jButtonSenhaAtual.setText("Tela Senha Atual");
+        jButtonSenhaAtual.setToolTipText("Tela Senha Atual");
+        jButtonSenhaAtual.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSenhaAtualActionPerformed(evt);
+            }
+        });
+
+        jLabel7.setFont(new java.awt.Font("Century Gothic", 3, 10)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel7.setText("developed by Vinicius / Lucas / Denes");
 
         jLabel2.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(240, 240, 240));
@@ -106,50 +159,6 @@ public class DistribuirSenhasGUI extends javax.swing.JFrame {
         jLabelHora.setText("00:00:00");
         jLabelHora.setFocusCycleRoot(true);
 
-        jButtonSenhaAtual.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-        jButtonSenhaAtual.setText("Tela Senha Atual");
-        jButtonSenhaAtual.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonSenhaAtualActionPerformed(evt);
-            }
-        });
-
-        jRadioButtonPreferencial.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
-        jRadioButtonPreferencial.setText("Mesas de Atendimento");
-        jRadioButtonPreferencial.setOpaque(false);
-        jRadioButtonPreferencial.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButtonPreferencialActionPerformed(evt);
-            }
-        });
-
-        jRadioButtonComum.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
-        jRadioButtonComum.setText("Caixas");
-        jRadioButtonComum.setOpaque(false);
-        jRadioButtonComum.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButtonComumActionPerformed(evt);
-            }
-        });
-
-        jButtonChamar.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-        jButtonChamar.setText("Tela de chamada");
-        jButtonChamar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonChamarActionPerformed(evt);
-            }
-        });
-
-        jLabel7.setFont(new java.awt.Font("Century Gothic", 3, 10)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(204, 204, 204));
-        jLabel7.setText("developed by Vinicius / Lucas / Denes");
-
-        jLabel3.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
-        jLabel3.setText("ON BANK");
-
-        jLabel4.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        jLabel4.setText("SAJ");
-
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/download.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -157,78 +166,82 @@ public class DistribuirSenhasGUI extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(308, 308, 308)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel3)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(66, 66, 66)
-                        .addComponent(jLabel1)
-                        .addGap(33, 33, 33)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jRadioButtonPreferencial)
-                            .addComponent(jRadioButtonVIP)
+                            .addComponent(jLabel1)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jRadioButtonComum)
-                                .addGap(149, 149, 149)
-                                .addComponent(jButtonRetirar))))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jRadioButtonVIP)
+                                            .addComponent(jRadioButtonComum))
+                                        .addGap(60, 60, 60))
+                                    .addComponent(jRadioButtonPreferencial))
+                                .addGap(18, 18, 18)
+                                .addComponent(jButtonRetirar)))
+                        .addGap(100, 100, 100))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(0, 63, Short.MAX_VALUE)
-                                .addComponent(jButtonChamar))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(19, 19, 19)
-                                .addComponent(jLabel7)
-                                .addGap(29, 29, 29)))
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(31, 31, 31)
-                                .addComponent(jButtonSenhaAtual)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel2)
-                                .addGap(33, 33, 33)
-                                .addComponent(jLabelHora)
-                                .addGap(16, 16, 16)))
-                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel4)
+                                    .addComponent(jLabel3))
+                                .addGap(291, 291, 291))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(jLabel7)
+                                        .addGap(195, 195, 195)
+                                        .addComponent(jLabel2)
+                                        .addGap(33, 33, 33)
+                                        .addComponent(jLabelHora))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGap(55, 55, 55)
+                                        .addComponent(jButtonChamar)
+                                        .addGap(76, 76, 76)
+                                        .addComponent(jButtonSenhaAtual)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(24, 24, 24))))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(28, 28, 28)
+                .addGap(47, 47, 47)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel4)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButtonComum)
+                .addGap(39, 39, 39)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jRadioButtonComum)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jRadioButtonVIP))
                     .addComponent(jButtonRetirar))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jRadioButtonVIP)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jRadioButtonPreferencial)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 118, Short.MAX_VALUE)
+                .addGap(96, 96, 96)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel7)
-                                .addComponent(jLabel2)
-                                .addComponent(jLabelHora)))
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(106, 106, 106)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButtonSenhaAtual)
-                            .addComponent(jButtonChamar))
-                        .addGap(57, 57, 57))))
+                            .addComponent(jButtonSenhaAtual, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButtonChamar, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel7)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabelHora)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -244,6 +257,18 @@ public class DistribuirSenhasGUI extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jRadioButtonComumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonComumActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButtonComumActionPerformed
+
+    private void jRadioButtonVIPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonVIPActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButtonVIPActionPerformed
+
+    private void jRadioButtonPreferencialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonPreferencialActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButtonPreferencialActionPerformed
 
     private void jButtonRetirarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRetirarActionPerformed
         // TODO add your handling code here:
@@ -263,29 +288,17 @@ public class DistribuirSenhasGUI extends javax.swing.JFrame {
         buttonGroup1.clearSelection();
     }//GEN-LAST:event_jButtonRetirarActionPerformed
 
-    private void jButtonSenhaAtualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSenhaAtualActionPerformed
-        // TODO add your handling code here:
-        controle.abrirTelaSenhaAtual();
-        controle.fecharTelaDistribuirSenha();
-    }//GEN-LAST:event_jButtonSenhaAtualActionPerformed
-
     private void jButtonChamarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonChamarActionPerformed
         // TODO add your handling code here:
         controle.abrirTelaChamarCliente();
         controle.fecharTelaDistribuirSenha();
     }//GEN-LAST:event_jButtonChamarActionPerformed
 
-    private void jRadioButtonComumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonComumActionPerformed
+    private void jButtonSenhaAtualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSenhaAtualActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButtonComumActionPerformed
-
-    private void jRadioButtonPreferencialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonPreferencialActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButtonPreferencialActionPerformed
-
-    private void jRadioButtonVIPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonVIPActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButtonVIPActionPerformed
+        controle.abrirTelaSenhaAtual();
+        controle.fecharTelaDistribuirSenha();
+    }//GEN-LAST:event_jButtonSenhaAtualActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
