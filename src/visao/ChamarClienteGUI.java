@@ -51,7 +51,8 @@ public class ChamarClienteGUI extends javax.swing.JFrame {
             }
         });
 
-        jButtonChamar.setText("Chamar");
+        jButtonChamar.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jButtonChamar.setText("Chamar Senha");
         jButtonChamar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonChamarActionPerformed(evt);
