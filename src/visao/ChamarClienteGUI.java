@@ -26,9 +26,10 @@ public class ChamarClienteGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         jButtonSenhaAtual = new javax.swing.JButton();
-        jButtonRetirar = new javax.swing.JButton();
         jButtonChamar = new javax.swing.JButton();
+        jButtonRetirar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -40,13 +41,6 @@ public class ChamarClienteGUI extends javax.swing.JFrame {
             }
         });
 
-        jButtonRetirar.setText("Tela de retirada");
-        jButtonRetirar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonRetirarActionPerformed(evt);
-            }
-        });
-
         jButtonChamar.setText("Chamar");
         jButtonChamar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -54,30 +48,48 @@ public class ChamarClienteGUI extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+        jButtonRetirar.setText("Tela de retirada");
+        jButtonRetirar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonRetirarActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(148, 148, 148)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButtonChamar, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
+                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jButtonRetirar)
                         .addGap(112, 112, 112)
                         .addComponent(jButtonSenhaAtual)))
                 .addContainerGap(180, Short.MAX_VALUE))
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(107, 107, 107)
                 .addComponent(jButtonChamar, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 117, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonRetirar)
                     .addComponent(jButtonSenhaAtual))
                 .addGap(70, 70, 70))
+        );
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -88,12 +100,6 @@ public class ChamarClienteGUI extends javax.swing.JFrame {
         controle.abrirTelaSenhaAtual();
         controle.fecharTelaChamarCliente();
     }//GEN-LAST:event_jButtonSenhaAtualActionPerformed
-
-    private void jButtonRetirarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRetirarActionPerformed
-        // TODO add your handling code here:
-        controle.abrirTelaDistribuirSenha();
-        controle.fecharTelaChamarCliente();
-    }//GEN-LAST:event_jButtonRetirarActionPerformed
 
     private void jButtonChamarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonChamarActionPerformed
         // TODO add your handling code here:
@@ -106,12 +112,12 @@ public class ChamarClienteGUI extends javax.swing.JFrame {
                 senha = controle.verSenhaAtual();
             }
             confirmacao = JOptionPane.showConfirmDialog(this, "Senha atual:" + senha.getId()
-                    + "\n Número de chamados: " + controle.getNumeroChamadosSenha()
-                    + "\n O Cliente compareceu?");
+                + "\n Número de chamados: " + controle.getNumeroChamadosSenha()
+                + "\n O Cliente compareceu?");
             switch (confirmacao) {
                 case JOptionPane.YES_OPTION: {
                     JOptionPane.showMessageDialog(this, "A próxima senha pode ser chamada",
-                            "Sucesso", JOptionPane.INFORMATION_MESSAGE);
+                        "Sucesso", JOptionPane.INFORMATION_MESSAGE);
                     controle.setChamarProximo(true);
                     break;
                 }
@@ -127,14 +133,21 @@ public class ChamarClienteGUI extends javax.swing.JFrame {
             }
         } catch (NullPointerException e) {
             JOptionPane.showMessageDialog(this, "Processo completo",
-                    "Não há senhas", JOptionPane.INFORMATION_MESSAGE);
+                "Não há senhas", JOptionPane.INFORMATION_MESSAGE);
         }
     }//GEN-LAST:event_jButtonChamarActionPerformed
+
+    private void jButtonRetirarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRetirarActionPerformed
+        // TODO add your handling code here:
+        controle.abrirTelaDistribuirSenha();
+        controle.fecharTelaChamarCliente();
+    }//GEN-LAST:event_jButtonRetirarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonChamar;
     private javax.swing.JButton jButtonRetirar;
     private javax.swing.JButton jButtonSenhaAtual;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

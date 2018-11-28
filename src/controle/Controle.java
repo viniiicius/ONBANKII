@@ -90,10 +90,10 @@ public class Controle {
                 id = "C" + n;
                 break;
             case Tipo.VIP:
-                id = "V" + n;
+                id = "OBU" + n;
                 break;
             case Tipo.PREFERENCIAL:
-                id = "P" + n;
+                id = "MA" + n;
                 break;
             default:
                 id = "C" + n;
