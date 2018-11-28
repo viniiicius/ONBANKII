@@ -12,7 +12,7 @@ import util.Tipo;
 
 /**
  *
- * @author Usuário
+ * @author Vinicius
  */
 public class DistribuirSenhasGUI extends javax.swing.JFrame {
 

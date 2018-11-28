@@ -2,7 +2,7 @@ package util;
 
 /**
  *
- * @author Usuário
+ * @author Vinicius
  */
 public class Tipo {
     

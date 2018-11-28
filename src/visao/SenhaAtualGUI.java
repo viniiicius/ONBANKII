@@ -4,7 +4,7 @@ import controle.Controle;
 
 /**
  *
- * @author Usuário
+ * @author Vinicius
  */
 public class SenhaAtualGUI extends javax.swing.JFrame {
 

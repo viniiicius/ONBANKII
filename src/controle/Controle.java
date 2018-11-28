@@ -15,14 +15,14 @@ import visao.Bemv;
 
 /**
  *
- * @author Usuário
+ * @author Vinicius
  */
 public class Controle {
 
     private ChamarClienteGUI chamarClienteGUI;
     private DistribuirSenhasGUI distribuirSenhasGUI;
     private SenhaAtualGUI senhaAtualGUI;
-    private Bemv Bemv;
+   // private Bemv Bemv;
 
     private PriorityQueue<Senha> proximasSenhas;
     private List<Senha> senhasPassadas;
@@ -110,9 +110,9 @@ public class Controle {
         
     }
     
-    public void fecharBemv (){
-        Bemv.dispose();
-    }
+   // public void fecharBemv (){
+   //     Bemv.dispose();
+    //}
 
     public void abrirTelaDistribuirSenha() {
         distribuirSenhasGUI = new DistribuirSenhasGUI(this);

@@ -5,7 +5,7 @@ import modelo.Senha;
 
 /**
  *
- * @author Usuário
+ * @author Vinicius
  */
 public class SenhaComparator implements Comparator {
 
