@@ -7,11 +7,11 @@ import java.util.PriorityQueue;
 import modelo.Senha;
 import util.SenhaComparator;
 import util.Tipo;
-import visao.Bemv;
+import fail.Bemv;
 import visao.ChamarClienteGUI;
 import visao.DistribuirSenhasGUI;
 import visao.SenhaAtualGUI;
-import visao.Bemv;
+import fail.Bemv;
 
 /**
  *
@@ -22,7 +22,7 @@ public class Controle {
     private ChamarClienteGUI chamarClienteGUI;
     private DistribuirSenhasGUI distribuirSenhasGUI;
     private SenhaAtualGUI senhaAtualGUI;
-   // private Bemv Bemv;
+    private Bemv Bemv;
 
     private PriorityQueue<Senha> proximasSenhas;
     private List<Senha> senhasPassadas;
@@ -104,12 +104,18 @@ public class Controle {
         return senha;
     }
     
-    public void abrirTelaDistribuirSenha2(){
-        distribuirSenhasGUI = new DistribuirSenhasGUI(this);
-        distribuirSenhasGUI.setVisible(true);
-        
-    }
+//    public void abrirTelaDistribuirSenha2(){
+//        distribuirSenhasGUI = new DistribuirSenhasGUI(this);
+//        distribuirSenhasGUI.setVisible(true);
+//        
+//    }
     
+//    public void abrirTelaBemv (){
+//        Bemv = new Bemv (this);
+//        Bemv.setVisible(true);
+//        
+//    }
+//    
    // public void fecharBemv (){
    //     Bemv.dispose();
     //}
