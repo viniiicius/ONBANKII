@@ -239,7 +239,7 @@
               <Image iconType="3" name="/Imagens/icons8-fila-50.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Tela de chamada"/>
-            <Property name="toolTipText" type="java.lang.String" value=""/>
+            <Property name="toolTipText" type="java.lang.String" value="Tela de chamada"/>
             <Property name="contentAreaFilled" type="boolean" value="false"/>
           </Properties>
           <Events>

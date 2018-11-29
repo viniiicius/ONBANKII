@@ -134,7 +134,7 @@ public class DistribuirSenhasGUI extends javax.swing.JFrame {
         jButtonChamar.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
         jButtonChamar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/icons8-fila-50.png"))); // NOI18N
         jButtonChamar.setText("Tela de chamada");
-        jButtonChamar.setToolTipText("");
+        jButtonChamar.setToolTipText("Tela de chamada");
         jButtonChamar.setContentAreaFilled(false);
         jButtonChamar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
